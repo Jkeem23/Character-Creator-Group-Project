@@ -1,3 +1,37 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// imported fonts from google fonts
+@import url('https://fonts.googleapis.com/css?family=Almendra+SC|Cardo|Fredericka+the+Great|Inknut+Antiqua|Metamorphous|Nixie+One|Uncial+Antiqua');
+
+h1{
+    text-shadow:
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+		
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Almendra SC', serif;
+}
+
+body {
+    background-image: url("https://images8.alphacoders.com/718/718461.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+#inner {
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    width: 50%;
+    border-radius: 25px;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+#inner p{
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 20px;
+}
