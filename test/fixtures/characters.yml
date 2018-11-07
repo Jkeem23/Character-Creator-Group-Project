@@ -2,26 +2,26 @@
 
 one:
   name: MyString
-  race: 
-  class: MyString
+  race: MyString
+  roleType: MyString
   backstory: MyText
-  strenth: 1
+  strength: 1
   intelligence: 1
   luck: 1
-  enduranc: 1
+  endurance: 1
   charisma: 1
   perception: 1
   agility: 1
 
 two:
   name: MyString
-  race: 
-  class: MyString
+  race: MyString
+  roleType: MyString
   backstory: MyText
-  strenth: 1
+  strength: 1
   intelligence: 1
   luck: 1
-  enduranc: 1
+  endurance: 1
   charisma: 1
   perception: 1
   agility: 1

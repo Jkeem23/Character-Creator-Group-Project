@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_06_152608) do
+ActiveRecord::Schema.define(version: 2018_11_07_143859) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "race"
-    t.string "class"
+    t.string "roleType"
     t.text "backstory"
-    t.integer "strenth"
+    t.integer "strength"
     t.integer "intelligence"
     t.integer "luck"
-    t.integer "enduranc"
+    t.integer "endurance"
     t.integer "charisma"
     t.integer "perception"
     t.integer "agility"
