@@ -1,0 +1,41 @@
+<%= form_for @character do |f| %>
+ 
+  <% if @character.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@character.errors.count, "error") %> prohibited
+        this note from being saved:
+      </h2>
+      <ul>
+        <% @character.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :race %><br>
+    <%= f.text_field :race %>
+  </p>
+  
+  <p>
+    <%= f.label :roleType %><br>
+    <%= f.text_field :roleType %>
+  </p>
+  
+  <p>
+    <%= f.label :backstory %><br>
+    <%= f.text_area :backstory %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
