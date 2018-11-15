@@ -1,10 +1,12 @@
+<h1>Character: <%= @character.name %></h1>
+
 <body>
     <div id="inner">
         <p>
-  <strong>Character Name:</strong>
-  <%= @character.name %>
-</p>
-
-<%= link_to 'Character List', characters_path %>
+            <strong>Character Name:</strong>
+            <%= @character.name %>
+            <br>
+            <%= link_to 'Character List', characters_path %>
+        </p>
     </div>
 </body>
