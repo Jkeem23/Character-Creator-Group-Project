@@ -6,6 +6,7 @@
             <strong>Character Name:</strong>
             <%= @character.name %>
         </p>
+        <hr>
         <p>
             <strong>Race:</strong>
             <%= @character.race %>
@@ -47,35 +48,43 @@
             <%= @character.luck %>
 </p>
 
-        <h2>Gatherers</h2>
+</div>
+</br>
+<div id = "inner">
+        <p>
+        <strong><%= @character.name %>'s Gathering Classes</strong>
+        </p>
         <% @character.gatherers.each do |gatherer| %>
         <p>
-            <strong>Gatherer Type:</strong>
-            <%= gatherer.gatherType %>
-        </p>
-        
-        <p>
-            <strong>Gatherer Level:</strong>
+            <strong>Class:</strong>
+            <%= gatherer.gatherType %><br>
+
+            <strong>Level:</strong>
             <%= gatherer.gatherLevel %>
         </p>
         
         <% end %>
-        
-        <h2>Add a gatherer:</h2>
+        <hr>
+        <p>
+        <strong>Add a gatherer:</strong>
+        </p>
         <%= form_for([@character, @character.gatherers.build]) do |f| %>
           <p>
-            <%= f.label :gatherType %><br>
-            <%= f.text_field :gatherType %>
-          </p>
-          <p>
-            <%= f.label :gatherLevel %><br>
+            <%= f.label :Class %>
+            <%= f.text_field :gatherType %><br>
+            
+            <%= f.label :Level %>
             <%= f.number_field :gatherLevel %>
           </p>
           <p>
             <%= f.submit %>
           </p>
         <% end %>
+        </div>
         
+        <br>
+        
+        <div id = "inner">
             <%= link_to 'Character List', characters_path %>
     </div>
 </body>
