@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gatherType: MyString
+  gatherLevel: 1
+  character: one
+
+two:
+  gatherType: MyString
+  gatherLevel: 1
+  character: two

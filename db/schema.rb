@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_143859) do
+ActiveRecord::Schema.define(version: 2018_11_26_010907) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2018_11_07_143859) do
     t.integer "agility"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "gatherers", force: :cascade do |t|
+    t.string "gatherType"
+    t.integer "gatherLevel"
+    t.integer "character_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_gatherers_on_character_id"
   end
 
 end
