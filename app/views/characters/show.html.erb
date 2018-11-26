@@ -46,6 +46,36 @@
             <strong>luck:</strong>
             <%= @character.luck %>
 </p>
+
+        <h2>Gatherers</h2>
+        <% @character.gatherers.each do |gatherer| %>
+        <p>
+            <strong>Gatherer Type:</strong>
+            <%= gatherer.gatherType %>
+        </p>
+        
+        <p>
+            <strong>Gatherer Level:</strong>
+            <%= gatherer.gatherLevel %>
+        </p>
+        
+        <% end %>
+        
+        <h2>Add a gatherer:</h2>
+        <%= form_for([@character, @character.gatherers.build]) do |f| %>
+          <p>
+            <%= f.label :gatherType %><br>
+            <%= f.text_field :gatherType %>
+          </p>
+          <p>
+            <%= f.label :gatherLevel %><br>
+            <%= f.number_field :gatherLevel %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
+        
             <%= link_to 'Character List', characters_path %>
     </div>
 </body>
