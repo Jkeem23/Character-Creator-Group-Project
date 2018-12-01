@@ -54,32 +54,12 @@
         <p>
         <strong><%= @character.name %>'s Gathering Classes</strong>
         </p>
-        <% @character.gatherers.each do |gatherer| %>
-        <p>
-            <strong>Class:</strong>
-            <%= gatherer.gatherType %><br>
-
-            <strong>Level:</strong>
-            <%= gatherer.gatherLevel %>
-        </p>
-        
-        <% end %>
+        <%= render @character.gatherers %>
         <hr>
         <p>
         <strong>Add a gatherer:</strong>
         </p>
-        <%= form_for([@character, @character.gatherers.build]) do |f| %>
-          <p>
-            <%= f.label :Class %>
-            <%= f.text_field :gatherType %><br>
-            
-            <%= f.label :Level %>
-            <%= f.number_field :gatherLevel %>
-          </p>
-          <p>
-            <%= f.submit %>
-          </p>
-        <% end %>
+        <%= render 'gatherers/form' %>
         </div>
         
         <br>

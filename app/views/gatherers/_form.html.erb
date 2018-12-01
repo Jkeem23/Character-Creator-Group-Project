@@ -1,0 +1,12 @@
+<%= form_for([@character, @character.gatherers.build]) do |f| %>
+          <p>
+            <%= f.label :Class %>
+            <%= f.text_field :gatherType %><br>
+            
+            <%= f.label :Level %>
+            <%= f.number_field :gatherLevel %>
+          </p>
+          <p>
+            <%= f.submit %>
+          </p>
+        <% end %>
