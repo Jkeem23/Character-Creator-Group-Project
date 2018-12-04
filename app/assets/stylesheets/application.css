@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ 
+ #error_explanation{
+    text-align: center;
+    text-shadow:
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+		
+    font-family: 'Almendra SC', serif;
+}

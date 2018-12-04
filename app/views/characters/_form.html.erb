@@ -4,7 +4,7 @@
     <div id="error_explanation">
       <h2>
         <%= pluralize(@character.errors.count, "error") %> prohibited
-        this note from being saved:
+        this character from being created:
       </h2>
       <ul>
         <% @character.errors.full_messages.each do |msg| %>
@@ -21,12 +21,12 @@
  
   <p>
     <%= f.label :race %><br>
-    <%= f.text_field :race %>
+    <%= f.select(:race, options_for_select(['Human', 'Elf', 'Dwarf', 'Gnome'])) %>
   </p>
   
   <p>
     <%= f.label :roleType %><br>
-    <%= f.text_field :roleType %>
+    <%= f.select(:roleType, options_for_select(['Lancer', 'Warrior', 'Monk', 'Wizard', 'Archer', "Priest"])) %>
   </p>
   
   <p>
