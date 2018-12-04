@@ -41,3 +41,11 @@ feature "player adds a character" do
   end
   
 end
+
+feature "Player edits a character" do
+  scenario "As a user I want to be able to edit my character" do
+    visit characters_path
+    expect(page).to have_content("JIMO")
+    click_button "Edit"
+  end
+end
