@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  get 'game_info/info'
   
   resources :characters do
     resources :gatherers
